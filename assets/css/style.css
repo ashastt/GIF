@@ -1,0 +1,89 @@
+html,
+body{
+	background: url('../images/marvel-bg-2.jpg');
+	background-size: cover;
+	background-repeat: repeat-y;
+	font-family: 'Acme', cursive;
+}
+
+header{
+	background-color: #000019;
+	border-bottom: 2px solid grey;
+	opacity: 0.6;
+}
+
+#heading{
+	text-align: center;
+	color: #ffffff;
+	font-size: 48px;
+}
+
+.headerImage {
+	height: 100px;
+	width: 200px;
+}
+
+/*#header{
+	opacity: 0.6;
+	margin-top: 10px;
+	padding: 0px;
+	border : 1px solid red;
+
+}*/
+
+.inlineBlock{
+	display: inline;
+}
+
+
+#button-holder{
+	margin: 10px auto;
+	border: 2px solid #ffffff;
+	background-color: #000019;
+	opacity: 0.5;
+}
+
+.marvel_btn{
+	padding: 10px 30px;
+	margin : 10px;
+	text-align: center;
+	background-color: #ffffff;
+	/*color: #00004c;*/
+	font-size: 18px;
+}
+
+#gif-holder{
+	margin: 0 auto;
+	border: 2px solid #ffffff;
+	background-color: #000019;
+}
+
+.gif-div{
+	position: relative;
+	float : left;
+	background-color: #ffffff;
+	margin : 10px 13px;
+}
+
+.gif-div img{
+	width: 350px;
+	height: 160px;
+	border: 2px solid #ffffff;
+}
+
+.gif-div img:hover{
+	border: 5px solid red;
+}
+
+.gif-rating{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #000019;
+	padding: 5px;
+	color: #ffffff;
+	font-size: 18px;
+}
+.search-form{
+	margin-top: 30px;
+}
