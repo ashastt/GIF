@@ -1,6 +1,6 @@
 html,
 body{
-	background: url('../images/marvel-bg-2.jpg');
+	background: url('../images/marvel-bg-4.jpg');
 	background-size: cover;
 	background-repeat: repeat-y;
 	font-family: 'Acme', cursive;
@@ -18,23 +18,18 @@ header{
 	font-size: 48px;
 }
 
+#heading :hover {
+	cursor: pointer;
+}
+
 .headerImage {
 	height: 100px;
 	width: 200px;
 }
 
-/*#header{
-	opacity: 0.6;
-	margin-top: 10px;
-	padding: 0px;
-	border : 1px solid red;
-
-}*/
-
 .inlineBlock{
 	display: inline;
 }
-
 
 #button-holder{
 	margin: 10px auto;
@@ -44,12 +39,18 @@ header{
 }
 
 .marvel_btn{
-	padding: 10px 30px;
+	padding: 5px 30px;
 	margin : 10px;
 	text-align: center;
 	background-color: #ffffff;
-	/*color: #00004c;*/
+	color: #00007f;
 	font-size: 18px;
+	text-transform: capitalize; 
+}
+
+.marvel_btn:hover{
+	background-color: #00007f;
+	color: #ffffff;
 }
 
 #gif-holder{
@@ -86,4 +87,15 @@ header{
 }
 .search-form{
 	margin-top: 30px;
+}
+
+#footer{
+	background-color: #000000;
+	color: #ffffff;
+	padding: 5px;
+	font-size: 10px;
+	right: 0;
+	bottom:0;
+	position: absolute;
+	text-align: center;
 }

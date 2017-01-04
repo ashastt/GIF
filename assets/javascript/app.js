@@ -1,14 +1,10 @@
 var marvelCharacters = 
-['Super man', 'Batman', 'Spiderman', 'Ironman', 'Antman', 'Thor', 'Daredevil', 'Hulk'];
+['superman', 'batman', 'spiderman', 'ironman', 'antman', 'thor', 'daredevil', 'hulk'];
 
 $(document).ready(function(){
-	renderButtons();
 
-	$('.marvel_btn').click(function(){
-		var data = $(this).attr('data-name');
-		data = data.replace(" ", '+');
-		renderGifs(data);
-	});
+	$("#button-holder").empty();
+	renderButtons();
 
 	$('#add-btn').click(function(event){
 		event.preventDefault();
@@ -20,6 +16,9 @@ $(document).ready(function(){
 		renderGifs(addBtnVal);
 	});
 
+});
+
+
 function renderButtons() {
     for (var index = 0; index < marvelCharacters.length; index++) {
         var newButton = $("<button>");
@@ -29,6 +28,13 @@ function renderButtons() {
         newButton.text(marvelCharacters[index]);
         $("#button-holder").append(newButton);
     }
+
+    $('.marvel_btn').click(function(){
+		var data = $(this).attr('data-name');
+		console.log("Clicked button with data.." + data)
+		data = data.replace(" ", '+');
+		renderGifs(data);
+	});
 }
 
 function renderGifs(searchData){
@@ -52,7 +58,6 @@ function renderGifs(searchData){
     	 for (var i = 0; i < results.length; i++) {
             
             var gifDiv = $("<div class='gif-div'>");
-
             var rating = results[i].rating.toUpperCase();
             var stillGif = results[i].images.fixed_height_still.url;
             var animatedGif = results[i].images.fixed_height.url;
@@ -66,8 +71,7 @@ function renderGifs(searchData){
             charImage.attr("data-toggle-" + i, 'OFF');
             charImage.attr("src" , stillGif);
 
-            gifDiv.append(p);
-            
+            gifDiv.append(p);           
             gifDiv.append(charImage);
 
             $("#gif-holder").prepend(gifDiv);
@@ -91,6 +95,7 @@ function renderGifs(searchData){
 		});
 
     });
+
+
 }
 
-});
