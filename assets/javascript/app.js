@@ -41,7 +41,7 @@ function renderGifs(searchData){
 	var api_key = "dc6zaTOxFJmzC";
 	var limit = 9;
 	// console.log(searchData);
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchData + "&api_key=" + api_key +
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchData + "&api_key=" + api_key +
 	"&limit=" + limit;  
 
 	// console.log(queryURL);
